@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion with default styles</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="accordion-wrapper">
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+          <span>Section 1</span>
+          <i class="accordion-icon fas fa-chevron-right"></i>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-body">
+            <p>Contenu de la section 1...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+          <span>Section 2</span>
+          <i class="accordion-icon fas fa-chevron-right"></i>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-body">
+            <p>Contenu de la section 2...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+          <span>Section 3</span>
+          <i class="accordion-icon fas fa-chevron-right"></i>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-body">
+            <p>Contenu de la section 3...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../src/accordion.js"></script>
+    <script>
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const accordionContainer = document.querySelector(".accordion-wrapper");
+        const accordion = new Accordion(accordionContainer, {
+          multiple: true,
+          // defaultOpen: [0],
+          onToggle: (button, isOpen) => {
+            console.log(
+              `Panel ${button.textContent.trim()} is ${
+                isOpen ? "opened" : "closed"
+              }`
+            );
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
