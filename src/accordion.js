@@ -1,5 +1,6 @@
 class Accordion {
   constructor(element, options = {}) {
+    this.version = "1.0.1";
     this.accordion = element;
     this._config = {
       multiple: options.multiple || false,
@@ -100,6 +101,7 @@ class Accordion {
 
     .accordion-button {
       width: 100%;
+      background-color: var(--color-light-pink);
       background: var(--color-gradient-button-light);
       color: var(--color-accent-500);
       padding: 1.25rem;
@@ -191,6 +193,7 @@ class Accordion {
     }
 
     .accordion-content {
+      background-color: var(--color-light-pink);
       background: var(--color-gradient-content-light);
       border: 1px solid var(--color-border-light);
       border-top: none;
