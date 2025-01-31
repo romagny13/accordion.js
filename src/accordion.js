@@ -1,6 +1,6 @@
 class Accordion {
   constructor(element, options = {}) {
-    this.version = "1.0.1";
+    this.version = "1.0.2";
     this.accordion = element;
     this._config = {
       multiple: options.multiple || false,
@@ -219,47 +219,6 @@ class Accordion {
       line-height: 1.6;
       padding: 1.25rem;
       font-size: 0.875rem;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      .accordion-button {
-        background: var(--color-gradient-button-dark);
-        color: var(--color-text-dark);
-        border-color: var(--color-border-dark);
-        box-shadow:
-          0 4px 6px -1px var(--color-shadow-dark),
-          0 2px 4px -1px var(--color-shadow-dark);
-      }
-
-      .accordion-button::before {
-        background: var(--color-gradient-border-dark);
-      }
-
-      .accordion-button:hover {
-        background: linear-gradient(135deg, var(--color-gradient-start-dark) 0%, var(--color-gradient-end-dark) 100%);
-      }
-
-      .accordion-content {
-        background: var(--color-gradient-content-dark);
-        border-color: var(--color-border-dark);
-      }
-
-      .accordion-body {
-        color: var(--color-text-dark);
-      }
-
-      .accordion-icon {
-        background-color: rgba(var(--color-border-dark-rgb), var(--color-icon-background-alpha-dark));
-        color: var(--color-accent-100);
-      }
-
-      .accordion-button:hover .accordion-icon {
-        background-color: rgba(var(--color-border-dark-rgb), var(--color-icon-hover-alpha-dark));
-      }
-
-      .accordion-button.active .accordion-icon {
-        background-color: rgba(var(--color-border-dark-rgb), var(--color-icon-active-alpha-dark));
-      }
     }
   `;
 
